@@ -1,4 +1,4 @@
-CC	= arm-linux-gnueabihf-gcc
+CC	= riscv64-unknown-elf-gcc
 CFLAGS	= -O3 -ggdb -Wall
 LDFLAGS = -fno-stack-protector
 
@@ -19,5 +19,5 @@ example3.o: example3.c
 clean:
 	rm -f $(objects) example3
 
-qemu: example3
-	qemu-arm -L /usr/arm-linux-gnueabihf ./example3
+spike: example3
+	spike pk ./example3
