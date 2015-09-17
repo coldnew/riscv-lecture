@@ -1,25 +1,24 @@
 	.text
 	.global multiply
 multiply:
-	mul R0, R1, R0
-	bx lr
-	nop
+	mulw a0, a0, a1
+	ret
 	.type multiply, function
 	.size multipy, .-multiply
 
 	.global multiplyadd
 multiplyadd:
-	mla r0, r0, r1, r2
-	bx lr
-	nop
+	mulw a0, a0, a1
+	addw a0, a0, a2
+	ret
 	.type multiplyadd, function
 	.size multiplyadd, .-multiplyadd
 	
 	.global multiplysub
 multiplysub:
-	mls r0, r0, r1, r2
-	bx lr
-	nop
+	mulw a0, a0, a1
+	subw a0, a0, a2
+	ret
 	.type multiplysub, function
 	.size multiplysub, .-multiplysub
 	.end
