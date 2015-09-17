@@ -13,7 +13,7 @@ RISC-V assembly language instead.
 - [X] example3
 - [X] example4
 - [ ] example5
-- [ ] example6
+- [X] example6
 - [ ] hello
 - [ ] lab-1
 - [ ] lab-1i
