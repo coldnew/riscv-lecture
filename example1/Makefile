@@ -19,5 +19,5 @@ example1.o: example1.c
 clean:
 	rm -f $(objects) example1
 
-qemu: example1
+spike: example1
 	@sh cmd
