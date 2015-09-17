@@ -1,5 +1,5 @@
-AS	= arm-linux-gnueabihf-as
-LD	= arm-linux-gnueabihf-ld
+AS	= riscv64-unknown-elf-as
+LD	= riscv64-unknown-elf-ld
 SFLAGS  = 
 LDFLAGS =
 
@@ -20,5 +20,6 @@ hello.o: hello.s
 clean:
 	rm -f $(objects) hello
 
-qemu: hello
-	qemu-arm ./hello
+spike: hello
+	spike pk ./hello
+

@@ -1,19 +1,19 @@
 .text
 _start: .global _start
 
-@ sys_write ( fd, pstr, len)
-	@ r7=4 r0 r1 r2
-	mov r0, #1 @ fd <- stdout
-	adr r1, msg @ pstr <- *msg
-	mov r2, #14 @ len <- 14
-	mov r7, #4 @ syscall <- sys_write
-	swi 0 @ system call
+# sys_write ( fd, pstr, len )
+# a7=64 r0 r1 r2
+	li a0, 1   # fd <- stdout
+	la a1, msg # pstr <- *msg
+	li a2, 14  # len <- 14
+	li a7, 64  # syscall <- sys_write
+	scall      # system call
 
-@ sys_exit ( exitcode )
-	@ r7=1 r0
-	mov r0, #0 @ exitcode <- 0
-	mov r7, #1 @ syscall <- sys_exit
-	swi 0 @ system call
+# sys_exit ( exitcode )
+# a7=93 r0
+	li a0, 0   # exitcode <- 0
+	li a7, 93  # syscall <- sys_exit
+	scall      # system call
 
 msg:
 	.asciz "Hello, world!\n"
