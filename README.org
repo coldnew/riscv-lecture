@@ -9,7 +9,7 @@ RISC-V assembly language instead.
 
   Use =make spike= instead of =make qemu=
 
-- [ ] example2
+- [X] example2
 - [ ] example3
 - [ ] example4
 - [ ] example5
