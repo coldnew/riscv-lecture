@@ -1,4 +1,4 @@
-CC	= arm-linux-gnueabihf-gcc
+CC	= riscv64-unknown-elf-gcc
 CFLAGS	= -O2 -ggdb -Wall
 LDFLAGS = -fno-stack-protector
 
