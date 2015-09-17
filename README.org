@@ -1,0 +1,21 @@
+#+TITLE: riscv-lecture
+
+This repo is a fork from jserv's [[https://github.com/embedded2015/arm-lecture][embedded2015/arm-lecture]], which rewrite to
+RISC-V assembly language instead.
+
+* TODO
+
+- [X] example1
+
+  Use =make spike= instead of =make qemu=
+
+- [ ] example2
+- [ ] example3
+- [ ] example4
+- [ ] example5
+- [ ] example6
+- [ ] hello
+- [ ] lab-1
+- [ ] lab-1i
+- [ ] lab-2
+- [ ] lab-3
