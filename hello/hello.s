@@ -2,7 +2,7 @@
 _start: .global _start
 
 # sys_write ( fd, pstr, len )
-# a7=64 r0 r1 r2
+# a7=64 a0 a1 a2
 	li a0, 1   # fd <- stdout
 	la a1, msg # pstr <- *msg
 	li a2, 14  # len <- 14
@@ -10,7 +10,7 @@ _start: .global _start
 	scall      # system call
 
 # sys_exit ( exitcode )
-# a7=93 r0
+# a7=93 a0
 	li a0, 0   # exitcode <- 0
 	li a7, 93  # syscall <- sys_exit
 	scall      # system call
